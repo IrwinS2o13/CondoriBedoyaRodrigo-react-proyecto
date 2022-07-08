@@ -1,12 +1,20 @@
+import NavBar from './components/NavBar.jsx';
+import ItemListContainer from './components/ItemListContainer.jsx';
+
+import './components/NavBar.css'
 import './App.css';
-import NavBar from './components/NavBar.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 
 
 function App() {
   return (
-    
-      <NavBar />
-    
+      <div>
+            <NavBar />
+            <ItemListContainer saludo="hola"/>
+      </div>
   );
 }
 
