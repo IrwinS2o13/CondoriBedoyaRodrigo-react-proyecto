@@ -4,6 +4,7 @@ import ItemListContainer from './components/ItemListContainer.jsx';
 import './components/NavBar.css'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ItemCount from './components/ItemCount.js';
 
 
 
@@ -14,6 +15,7 @@ function App() {
       <div>
             <NavBar />
             <ItemListContainer saludo="hola"/>
+            <ItemCount stock="10"/>
       </div>
   );
 }

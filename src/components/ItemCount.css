@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+.marco{
+    border: 0.3rem #000000 solid;
+    border-radius: 0.8rem;
+}
+.texto{
+    display:flex;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.texto p{
+    margin: 0;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.count{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    width: 100%;
+    padding-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+.countimg{
+    height: 2rem;
+}
+.simb{
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+.simb button{
+    border-style: none;
+    background-color: transparent;
+}
