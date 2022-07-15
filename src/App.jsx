@@ -14,8 +14,11 @@ function App() {
   return (
       <div>
             <NavBar />
-            <ItemListContainer saludo="hola"/>
+            <br></br>
             <ItemCount stock="10"/>
+            <br></br>
+            <ItemListContainer saludo="hola"/>
+            
       </div>
   );
 }
