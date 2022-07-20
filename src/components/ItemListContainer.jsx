@@ -6,13 +6,13 @@ import Jordan1 from './multimedia/AJ1_2.png'
 import Jordan2 from './multimedia/AJ1_3.png'
 import Jordan3 from './multimedia/AJ1_4.png'
 
-const ItemListContainer =({saludo})=>{
+const ItemListContainer = () =>{
     const productos=[
         {id:1,nombre: "Air Jrodan 1 A", precio:500, stock: 10, image: Jordan1},
         {id:2,nombre: "Air Jrodan 1 B", precio:450, stock: 10, image: Jordan2},
         {id:3,nombre: "Air Jrodan 1 C", precio:520, stock: 10, image: Jordan3},
     ];
-
+    
     const[items,setItems]=useState([])
 
     const task = new Promise((res,rej)=>{
@@ -26,15 +26,7 @@ const ItemListContainer =({saludo})=>{
     },[])
 
     return(
-        <><div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <p>
-                        {saludo}
-                    </p>
-                </div>
-            </div>
-        </div>
+        <>
         <ItemList items={items}/>
         </>
     )
