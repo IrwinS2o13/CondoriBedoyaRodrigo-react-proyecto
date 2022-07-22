@@ -2,6 +2,7 @@ import React from 'react';
 import './NavBar.css'
 import logo from './multimedia/logorac.png';
 import CartWidget from './CartWidget';
+import {Link} from 'react-router-dom'
 
 function NavBar (){
     return(
@@ -10,11 +11,15 @@ function NavBar (){
                 <div className="row">
                     <div className="col-6">
                         <div className="logo">
-                            <img src={logo}/>
+                            <Link to ='/'>
+                                <img src={logo}/>
+                            </Link>
                         </div>
                     </div>
                     <div className="col-6">
-                            <CartWidget />
+                            <Link to ='/carrito'>
+                                <CartWidget />
+                            </Link>
                     </div>
                 </div>
             </div>
@@ -23,10 +28,18 @@ function NavBar (){
                     <div className="col-12">
                         <div className= "elemheader">
                             <ul>
-                                <li><a href=''>Nike</a></li>
-                                <li><a href=''>Adidas</a></li>
-                                <li><a href=''>Puma</a></li>
-                                <li><a href=''>Reebok</a></li>
+                                <Link to='/category/nike'>
+                                    <li>Nike</li>
+                                </Link>
+                                <Link to='/category/adidas'>
+                                    <li>Adidas</li>
+                                </Link>
+                                <Link to='/category/puma'>
+                                    <li>Puma</li>
+                                </Link>
+                                <Link to='/category/reebok'>
+                                    <li>Reebok</li>
+                                </Link>
                             </ul>
                         </div>
                     </div>

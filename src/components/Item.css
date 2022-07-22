@@ -29,3 +29,21 @@
     margin: 0;
     font-weight: 400;
 }
+.detalle{
+    display:flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.detalle button {
+    background-color: #000000; /* Green */
+    border: none;
+    border-radius: 0.8rem;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    padding: 0.8rem;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    width: 100%;
+  }

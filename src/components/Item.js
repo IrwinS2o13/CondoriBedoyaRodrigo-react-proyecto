@@ -1,8 +1,9 @@
 import React from "react";
 import './Item.css'
+import {Link} from 'react-router-dom'
 
 const Item =({item})=>{
-    const {nombre,precio,stock,image}=item
+    const {id,nombre,precio,stock,image}=item
     return(
         <div className="carta">
             <div className="row">
@@ -30,6 +31,15 @@ const Item =({item})=>{
                         <div className="col-12" style={{padding:'0'}}>
                             <div className="stock">
                                 Stock: {stock}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-12" style={{padding:'0'}}>
+                            <div className="detalle">
+                                <Link to={`/item/${id}`} style={{width:'100%'}}>
+                                    <button>Ver detalle</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
