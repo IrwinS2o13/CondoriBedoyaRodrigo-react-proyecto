@@ -16,6 +16,8 @@ import puma2 from './multimedia/puma_3.png'
 import puma3 from './multimedia/puma_4.png'
 import { useParams } from 'react-router-dom';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const ItemListContainer = () =>{
     const {categoryid}=useParams()
     console.log(categoryid)
@@ -53,7 +55,7 @@ const ItemListContainer = () =>{
     },[categoryid])
 
     return(
-        <div>            
+        <div className='container' style={{display:"flex", flexDirection:"row", flexWrap:"wrap"}}>            
             <ItemList items={items}/>
         </div>
     )

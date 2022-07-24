@@ -1,12 +1,14 @@
 import React from "react";
 import './Item.css'
 import {Link} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Item =({item})=>{
     const {id,nombre,precio,stock,image}=item
     return(
-        <div className="carta">
-            <div className="row">
+        <div className="col-4">
+            <div className="carta">
+                <div className="row">
                 <div className="col-12">
                     <div className="row">
                         <div className="col-12" style={{padding:'0'}}>
@@ -46,6 +48,8 @@ const Item =({item})=>{
                 </div>
             </div>
         </div>
+        </div>
+        
     )
 }
 
