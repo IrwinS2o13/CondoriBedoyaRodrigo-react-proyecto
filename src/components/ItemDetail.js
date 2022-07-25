@@ -33,18 +33,7 @@ const ItemDetail =({item})=>{
                             </div>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-12"style={{padding:"0", margin:"0"}}>
-                            <ItemCount stock={stock}/>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-12" style={{padding:'0'}}>
-                            <div className="addcart">
-                                    <button>Añadir al carrito</button>
-                            </div>
-                        </div>
-                    </div>
+                    <ItemCount stock={stock}/>
                 </div>
             </div>
         </div>
