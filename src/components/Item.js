@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Item =({item})=>{
     const {id,nombre,precio,stock,image}=item
     return(
-        <div className="col-4">
+        <div className="col-4" style={{justifyContent:"center", margin:"0", padding:"2rem"}}>
             <div className="carta">
                 <div className="row">
                 <div className="col-12">

@@ -1,5 +1,4 @@
 import React from 'react';
-import Item from './Item';
 import ItemList from './ItemList'
 import { useEffect,useState } from "react";
 import Jordan1 from './multimedia/AJ1_2.png'
@@ -46,7 +45,7 @@ const ItemListContainer = () =>{
 
     useEffect(()=>{
         if(categoryid){
-            task.then(res=>setItems(res.filter(cate=>cate.categoria==categoryid)))
+            task.then(res=>setItems(res.filter(cate=>cate.categoria===categoryid)))
         }
         else{
             task.then(res=>setItems(res))

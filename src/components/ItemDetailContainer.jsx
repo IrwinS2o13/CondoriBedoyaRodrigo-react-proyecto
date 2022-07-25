@@ -12,11 +12,9 @@ const ItemDetailContainer=()=>{
         .catch(err=>console.log(err))
         
     },[])
-    
-    console.log(result)
-      
+   
     return(
-        <div>
+        <div className='container'style={{paddingTop:'2rem'}}>
             <ItemDetail item={result}/>
         </div>
     )

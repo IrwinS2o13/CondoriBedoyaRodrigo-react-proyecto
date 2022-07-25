@@ -26,26 +26,8 @@ const ItemCount =({stock})=>{
     return(
         <div className="container">
             <div className="row">
-                <div className="col-4">
+                <div className="col-12">
                     <div className="marco">
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="texto">
-                                <p>
-                                    Prueba de contador
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="texto">
-                                <p>
-                                    Stock=10
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                     <div className="row">
                             <div className="col-4">
                                 <section className="simb">
