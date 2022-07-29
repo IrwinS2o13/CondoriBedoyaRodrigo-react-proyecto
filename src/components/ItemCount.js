@@ -23,7 +23,11 @@ const ItemCount =({stock})=>{
 
         }
     }
+    
     const InputCount=()=>{
+        const agregar=({agregar}) => {
+            const cantidad={contador}
+        }
         return(
             <>
                     <div className="row">
@@ -46,6 +50,7 @@ const ItemCount =({stock})=>{
         )       
     }
     const ButtonCount=({handleInter})=>{
+        
         return(
             <>
             <div className="container">

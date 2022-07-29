@@ -1,10 +1,18 @@
 import React from "react";
 import './ItemDetail.css'
 import ItemCount from "./ItemCount";
+import { useContext } from "react";
+import { useCartContext } from "../context/CartContext";
 
 const ItemDetail =({item})=>{
+
     const {nombre,precio,stock,image}=item
     console.log(item)
+    const agregar=({contador}) => {
+        console.log(contador)
+    }
+    
+    const {addToCart, cartList}=useCartContext()
     return(
         <div className="carta">
             <div className="row">
@@ -33,7 +41,7 @@ const ItemDetail =({item})=>{
                             </div>
                         </div>
                     </div>
-                    <ItemCount stock={stock}/>
+                    <ItemCount stock={stock} agregar={agregar}/>
                 </div>
             </div>
         </div>

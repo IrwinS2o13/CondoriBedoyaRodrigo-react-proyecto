@@ -9,11 +9,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from './components/ItemCount.js';
 import { useEffect, lazy, Suspense } from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import CartContextProvider from './context/CartContext.jsx';
+
 const ItemDetailContainer = lazy(()=>import('./components/ItemDetailContainer.jsx'))
 
 function App() {
   return (
       <BrowserRouter>
+        <CartContextProvider>
             <div>
               <NavBar />
               <Routes>
@@ -27,6 +30,7 @@ function App() {
                 }/>
               </Routes>   
             </div>
+        </CartContextProvider>            
       </BrowserRouter>
   );
 }
