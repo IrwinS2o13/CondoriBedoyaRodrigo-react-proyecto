@@ -6,7 +6,7 @@ import simbmenos from './multimedia/simbmenos.png'
 import {useState} from 'react';
 import {Link} from 'react-router-dom'
 
-const ItemCount =({stock})=>{
+const ItemCount =({stock, agregar})=>{
     const[contador, refcontador]=useState(1);
     const aumentar=() => {
         if(contador<=stock-1){
@@ -25,9 +25,7 @@ const ItemCount =({stock})=>{
     }
     
     const InputCount=()=>{
-        const agregar=({agregar}) => {
-            const cantidad={contador}
-        }
+    
         return(
             <>
                     <div className="row">
@@ -88,9 +86,11 @@ const ItemCount =({stock})=>{
             </>
         )
     }
+    
     const[inputType, setInputype]=useState('button')
     const handleInter=()=>{
         setInputype('input')
+        agregar(contador)
     }
     return(
         <div>
