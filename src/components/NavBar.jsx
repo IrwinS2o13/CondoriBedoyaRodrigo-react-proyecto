@@ -17,7 +17,7 @@ function NavBar (){
                         </div>
                     </div>
                     <div className="col-6">
-                            <Link to ='/carrito'>
+                            <Link to ='/cart' style={{ textDecoration: 'none' }}>
                                 <CartWidget />
                             </Link>
                     </div>

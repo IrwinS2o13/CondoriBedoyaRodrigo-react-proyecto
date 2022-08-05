@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+.info{
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+.item{
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.imagenbox{
+    display: flex;
+    justify-content: center;
+}
+.imagenbox img{
+    height: 4rem;
+}
+.nombre{
+    display: flex;
+}
+.caract{
+    display: flex;
+}
+.cartfin{
+    display:flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.cartfin button {
+    background-color: #000000; /* Green */
+    border: none;
+    border-radius: 0.8rem;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    padding: 0.8rem;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+  }

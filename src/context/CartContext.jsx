@@ -24,10 +24,37 @@ const CartContextProvider=({children})=>{
         }
         console.log(cartList)
     }
+    const vaciarCarrito=()=>{
+        setCartList([])
+    }
+    const eliminarItem=(objelim)=>{
+        setCartList(actual=>
+            actual.filter(listado=>{
+                return listado.id!==objelim
+            })
+            )
+    }
+    let acum=0
+    const detectarCantidad=()=>{
+        if(cartList.length===0){
+            return "0"
+        }
+        else{
+            cartList.map((obj)=>{
+                if (obj.id>0){
+                    acum=acum+1
+                }
+            })
+            return acum/2
+        }
+    }
     return(
         <CartContext.Provider value={{
             cartList,
-            addToCart
+            addToCart,
+            vaciarCarrito,
+            eliminarItem,
+            detectarCantidad
         }}>
             {children}
         </CartContext.Provider>
