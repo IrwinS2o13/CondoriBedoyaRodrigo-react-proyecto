@@ -1,6 +1,7 @@
 import { useCartContext } from "../context/CartContext";
 import {Link} from 'react-router-dom'
 import './Cart.css'
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 const CarroVacio=()=>{
     return(
@@ -22,7 +23,28 @@ const CarroVacio=()=>{
     )
 }
 const CarroLleno=()=>{
-    const {cartList, vaciarCarrito,eliminarItem}=useCartContext() 
+    const {cartList, vaciarCarrito,eliminarItem,precioTotal}=useCartContext() 
+
+    const generarOrden=()=>{
+        const order={}
+        order.buyer={name:'rodrigo', phone:'123456789', email:'r@gmail.com'}
+        order.items=cartList.map(product=>{
+            return{
+                id: product.id,
+                name:product.nombre,
+                price: product.precio,
+                qty: product.cantidad
+            }
+        })
+        order.total=precioTotal()
+
+        const db=getFirestore()
+        const queryOrders=collection(db, 'orders')
+        addDoc(queryOrders, order)
+        .then(resp=>alert("El id de su orden es: "+resp.id))
+        vaciarCarrito()
+    }
+
     return(
         <div className="container">
             {cartList.map(item=>
@@ -57,7 +79,12 @@ const CarroLleno=()=>{
                 </div>
             )}
             <div className="row">
-                <div className="col-12">
+                <div className="col-6">
+                    <div className="cartfin">
+                        <button onClick={generarOrden}>Generar Orden</button>
+                    </div>
+                </div>
+                <div className="col-6">
                     <div className="cartfin">
                         <button onClick={vaciarCarrito}>Vaciar carrito</button>
                     </div>

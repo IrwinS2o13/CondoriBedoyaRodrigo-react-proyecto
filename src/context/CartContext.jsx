@@ -22,7 +22,6 @@ const CartContextProvider=({children})=>{
                 objProduct
             ])
         }
-        console.log(cartList)
     }
     const vaciarCarrito=()=>{
         setCartList([])
@@ -48,13 +47,21 @@ const CartContextProvider=({children})=>{
             return acum/2
         }
     }
+    let total=0
+    const precioTotal=()=>{
+        cartList.map((suma)=>{
+            total=total+(suma.precio*suma.cantidad)
+        })
+        return total
+    }
     return(
         <CartContext.Provider value={{
             cartList,
             addToCart,
             vaciarCarrito,
             eliminarItem,
-            detectarCantidad
+            detectarCantidad,
+            precioTotal
         }}>
             {children}
         </CartContext.Provider>
