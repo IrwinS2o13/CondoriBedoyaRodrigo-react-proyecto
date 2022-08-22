@@ -44,7 +44,7 @@ const CartContextProvider=({children})=>{
                     acum=acum+1
                 }
             })
-            return acum/2
+            return acum
         }
     }
     let total=0
