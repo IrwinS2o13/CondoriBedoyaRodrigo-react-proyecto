@@ -16,7 +16,7 @@ Como levantar el proyecto localmente paso a paso:
 
 Dependencias:
 
-    "react" "^18.2.0": Libreria/framework principal del proyecto
+  "react" "^18.2.0": Libreria/framework principal del proyecto
   
   "react-router-dom" "^6.3.0": Usado para la navegacion y routing
 
